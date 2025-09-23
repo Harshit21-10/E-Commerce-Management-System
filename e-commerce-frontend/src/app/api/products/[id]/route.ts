@@ -5,7 +5,7 @@ export async function GET(
   { params }: { params: { id: string } }
 ) {
   try {
-    const backendUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8080';
+    const backendUrl = process.env.NEXT_PUBLIC_API_URL || 'https://e-commerce-management-system-2.onrender.com/';
     const response = await fetch(`${backendUrl}/api/products/${params.id}`, {
       headers: {
         'Content-Type': 'application/json',
@@ -35,7 +35,7 @@ export async function PUT(
 ) {
   try {
     const body = await request.json();
-    const backendUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8080';
+    const backendUrl = process.env.NEXT_PUBLIC_API_URL || 'https://e-commerce-management-system-2.onrender.com/';
     
     const response = await fetch(`${backendUrl}/api/products/${params.id}`, {
       method: 'PUT',
@@ -69,7 +69,7 @@ export async function DELETE(
   { params }: { params: { id: string } }
 ) {
   try {
-    const backendUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8080';
+    const backendUrl = process.env.NEXT_PUBLIC_API_URL || 'https://e-commerce-management-system-2.onrender.com/';
     const response = await fetch(`${backendUrl}/api/products/${params.id}`, {
       method: 'DELETE',
       headers: {
